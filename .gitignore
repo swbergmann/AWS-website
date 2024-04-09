@@ -1,3 +1,10 @@
+# macOS generated files
+.DS_Store
+.DS_Store?
+
+# content
+s3_content/*
+
 # Local .terraform directories
 **/.terraform/*
 
