@@ -73,3 +73,13 @@ resource "aws_s3_bucket_policy" "main" {
   bucket = aws_s3_bucket.main.id
   policy = data.aws_iam_policy_document.cloudfront_oac_access.json
 }
+
+resource "aws_s3_object" "upload_source_files" {
+  bucket = aws_s3_bucket.main.id
+
+  for_each = fileset("s3_content/", "**/*.*")
+
+  key = each.value
+  source = "s3_content/${each.value}"
+  content_type = each.value
+}
