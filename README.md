@@ -6,47 +6,48 @@ This application creates (and destroys) the necessary cloud infrastructure resou
 \
 The setup and installation processes were challenging and are documented in great detail below.  
 
-# How to Install the Project
+# How to Setup the Project
 
-This file describes the steps and installations that were necessary to run the code in Visual Studio Code on macOS Sonoma.
+This section describes the steps and installations that were necessary to create and run the code in Visual Studio Code on macOS Sonoma.
 
 ## 1. Install Terraform (via Homebrew)
 https://formulae.brew.sh/formula/terraform  
-\
-## 2 Upgrade Terraform (via Terminal)
+
+## 2. Upgrade Terraform (via Terminal)
 https://developer.hashicorp.com/terraform/install?product_intent=terraform  
-\
-## 3 Install Terraform Formatter (for VS Code)
+
+## 3. Install Terraform Formatter (for VS Code)
 https://marketplace.visualstudio.com/items?itemName=HashiCorp.terraform  
-\
-## 4 Install AWS CLI
+
+## 4. Install AWS CLI
 https://formulae.brew.sh/formula/awscli  
-\
-## 5 Create AWS IAM User with Administrator Access
+
+## 5. Create AWS IAM User with Administrator Access
 Go to IAM console, create IAM User, do not click checkbox "Provide access to AWS Console", select "attach policy directly" and give AdministratorAccess rights, review and create user  
-\
-## 6 Generate Access Key for IAM User
+
+## 6. Generate Access Key for IAM User
 click on the user, click on tab "Security credentials" and generate "new access key", select for (CLI) and create access key.  
-\
-## 7 Configure AWS (Terminal Connection)
+
+## 7. Configure AWS (Terminal Connection)
 Open Terminal (i.e. terminal inside VS Code) and enter "aws configure", provide both keys from #6 and default zone "eu-central-1", then click enter.  
-\
-## 8 ami specifics  
+
+## 8. note on ami specifics  
 When using an ami (amazon machine image) in the code, the region (i.e. eu-central-1) of the provider in the file config.tf must be the same region as selected in the AWS console (website) when you are selecting an ami (amazon machine image) number from the AWS Console.  
 
 # How to Run the Project
 ## Terraform commands:
-\
+
 ### terraform init  
-(run this after writing a new terraform configuration or cloning)  
-\
+run this after writing a new terraform configuration or cloning the project from github  
+
 ### terraform validate
-\
+to validate the terraform code  
+
 ### terraform plan
-(to see what will be applied)  
-\
+to preview the execution plan    
+
 ### terraform apply
-(to create the cloud infrastructure)  
-\
+confirm with "yes" - to create the cloud infrastructure  
+
 ### terraform delete
-(to destroy the cloud infrastructur)  
+confirm with "yes" - to destroy the cloud infrastructure
