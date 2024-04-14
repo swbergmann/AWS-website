@@ -57,8 +57,9 @@ resource "aws_cloudfront_distribution" "frontend" {
   }
 }
 
-# Manages cloudfront origin access control (increase backend security).
-# Cloudfront distribution uses this OAC with the S3 bucket as origin.
+# Manages cloudfront origin access control (OAC) for 
+# increased backend security. Cloudfront distribution 
+# uses this OAC with the S3 bucket as origin.
 resource "aws_cloudfront_origin_access_control" "oac" {
   name = "cloudfront-oac-to-S3"
   origin_access_control_origin_type = "s3"
@@ -68,8 +69,8 @@ resource "aws_cloudfront_origin_access_control" "oac" {
   signing_protocol = "sigv4"
 }
 
-# Describes the IAM policy document.
-# This document is expected by the S3 bucket policy (the resource below this).
+# Describes the IAM policy document. This document is
+# expected by the S3 bucket policy.
 data "aws_iam_policy_document" "document" {
   statement {
     principals {
