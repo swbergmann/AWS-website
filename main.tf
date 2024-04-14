@@ -1,5 +1,6 @@
 # Task 1.
-# Host a simple webpage on AWS using Terraform to write replicable Infrastructure as Code (IaC).
+# Host a simple webpage on AWS using Terraform 
+# to write replicable Infrastructure as Code (IaC).
 
 locals {
   # Value must be globally unique:
