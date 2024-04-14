@@ -5,7 +5,10 @@ Build AWS cloud infrastructure as code using Terraform and deploy a static websi
 This application creates (and destroys) the necessary cloud infrastructure resources to host a static website on AWS. It also uploads (and destroys) the static website (located in the directory: s3_content/) to the S3 backend.  
 
 ## Requirements/Scope
-High availability of the website, global low latency and automatic scaling of infrastructure components to serve high amounts of user traffic are implemented using a combination of AWS CloudFront and AWS S3.
+A combination of AWS CloudFront and AWS S3 is used to implement:
+* high availability of the website, 
+* no latency for visitors worldwide,
+* automatic scaling of infrastructure components to serve high amounts of user traffic.
 
 ## Architecture
 ![AWSArchitecture drawio](https://github.com/swbergmann/AWS-website/assets/52543581/2d907f4a-38fc-430f-900b-c5c9f31d30d6)
