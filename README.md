@@ -21,7 +21,7 @@ https://formulae.brew.sh/formula/awscli
 \
 #5  
 Create AWS IAM User with Admin Access  
-Go to IAM console, create IAM User, do not click checkbox "Provide access to AWS Console", select "attach policy directly" and give AdministratorAccess rights, review and create user
+Go to IAM console, create IAM User, do not click checkbox "Provide access to AWS Console", select "attach policy directly" and give AdministratorAccess rights, review and create user  
 \
 #6  
 Generate Access Key for IAM User  
