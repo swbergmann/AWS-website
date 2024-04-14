@@ -1,18 +1,11 @@
 # AWS-website
 Host a simple webpage on AWS.
 
-
-Terraform 
-plan
-apply - yes
-destroy
-
-
 This file describes the steps and installations that were necessary to run the code in Visual Studio Code editor.
 
-1.
-Install Terraform
-https://formulae.brew.sh/formula/terraform
+1.  
+Install Terraform  
+https://formulae.brew.sh/formula/terraform  
 
 2.
 Upgrade Terraform
