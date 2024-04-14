@@ -1,5 +1,5 @@
 # AWS-website
-Build AWS cloud infrastructure as code using Terraform and deploy a static website on it.
+Build AWS Cloud Infrastructure as Code (IaC) using Terraform and deploy a Static Website on it.
 
 # Project Description
 This application creates (and destroys) the necessary cloud infrastructure resources to host a static website on AWS. It also uploads (and destroys) the static website (located in the directory: s3_content/) to the S3 backend.  
