@@ -21,7 +21,8 @@ resource "aws_cloudfront_distribution" "frontend" {
   default_root_object = "index.html"
   is_ipv6_enabled = true
 
-  # AWS Managed Caching Policy (CachingOptimized) optimizes cache efficiency.
+  # AWS Managed Caching Policy (CachingOptimized) 
+  # optimizes cache efficiency.
   default_cache_behavior {
     # Using the CachingOptimized managed policy ID:
     cache_policy_id = "658327ea-f89d-4fab-a63d-7e88639e58f6"
@@ -35,7 +36,8 @@ resource "aws_cloudfront_distribution" "frontend" {
     viewer_protocol_policy = "redirect-to-https"
   }
 
-  # Specify the cloudfront origin (the S3 backend) and OAC ID.
+  # Specify the cloudfront origin (the S3 backend)
+  # and OAC ID.
   origin {
     domain_name = aws_s3_bucket.backend.bucket_regional_domain_name
     origin_access_control_id = aws_cloudfront_origin_access_control.oac.id
