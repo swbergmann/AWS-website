@@ -33,7 +33,7 @@ Open Terminal (i.e. terminal inside VS Code) and enter "aws configure", provide 
 \
 #8  
 ami specifics  
-When using an ami (amazon machine image) in the code, the region (i.e. eu-central-1) of the provider in the file config.tf must be the same region as selected in the AWS console (website) when you are selecting an ami (amazon machine image) number from the AWS Console.
+When using an ami (amazon machine image) in the code, the region (i.e. eu-central-1) of the provider in the file config.tf must be the same region as selected in the AWS console (website) when you are selecting an ami (amazon machine image) number from the AWS Console.  
 \
 #9  
 Terraform commands:  
@@ -42,4 +42,3 @@ terraform validate
 terraform plan  
 terraform apply  
 terraform delete  
-\
