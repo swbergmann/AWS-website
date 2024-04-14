@@ -53,10 +53,15 @@ run this after writing a new terraform configuration or cloning the project from
 to validate the terraform code  
 
 ### terraform plan
-to preview the execution plan    
+to preview the execution plan  
 
 ### terraform apply
 confirm with "yes" - to create the cloud infrastructure  
+and wait for the deployment to complete  
+
+### check the website
+in the AWS Console navigate to the newly created "CloudFront" distribution  
+copy the "Domain name" (i.e. abc123123123xyz.cloudfront.net) and access it using a browser  
 
 ### terraform delete
 confirm with "yes" - to destroy the cloud infrastructure
