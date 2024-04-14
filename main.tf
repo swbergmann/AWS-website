@@ -6,11 +6,14 @@ locals {
   s3_bucket_name = "website-backend-6571963"
 }
 
-# empty the S3 bucket manually before it can be deleted by terraform
+# S3 bucket used as backend
+# to store the static website files
 resource "aws_s3_bucket" "backend" {
   bucket = local.s3_bucket_name
 }
 
+# cloudfront distribution used as frontend
+# to globally cache and serve the website to users
 resource "aws_cloudfront_distribution" "frontend" {
   enabled = true
   default_root_object = "index.html"
@@ -42,8 +45,8 @@ resource "aws_cloudfront_distribution" "frontend" {
   }
 }
 
-# restrict access to and make S3 backend more secure
-# cloudfront distribution uses this OAC with an S3 as origin
+# manages cloudfront origin access control (increase backend security)
+# cloudfront distribution uses this OAC with the S3 bucket as origin
 resource "aws_cloudfront_origin_access_control" "oac" {
   name = "cloudfront-oac-to-S3"
   origin_access_control_origin_type = "s3"
@@ -52,7 +55,7 @@ resource "aws_cloudfront_origin_access_control" "oac" {
 }
 
 # describes the IAM policy
-# is expected by the S3 bucket policy (resource below)
+# is expected by the S3 bucket policy (the resource below this)
 data "aws_iam_policy_document" "document" {
   statement {
     principals {
@@ -77,7 +80,7 @@ resource "aws_s3_bucket_policy" "policy" {
   policy = data.aws_iam_policy_document.document.json
 }
 
-#automatically upload the files to S3
+#automatically upload/destroy the website files to the S3 bucket
 resource "aws_s3_object" "auto_upload" {
   bucket = aws_s3_bucket.backend.id
 

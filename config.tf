@@ -1,4 +1,4 @@
-# Configuration file
+# Terraform and AWS configurations
 
 terraform {
   required_providers {
