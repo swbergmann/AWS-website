@@ -59,9 +59,20 @@ to preview the execution plan
 confirm with "yes" - to create the cloud infrastructure  
 and wait for the deployment to complete  
 
-### check the website
-in the AWS Console navigate to the newly created "CloudFront" distribution  
+# Check the result
+In the AWS Console navigate to the newly created "CloudFront" distribution  
 copy the "Domain name" (i.e. abc123123123xyz.cloudfront.net) and access it using a browser  
+
+The result should look similar to this image:
+![Screenshot 2024-04-14 at 17 15 52](https://github.com/swbergmann/AWS-website/assets/52543581/fd039a9c-6019-40ab-9747-f02ee8237f1f)
+
+# Cleanup of Infrastructure
+In order to destroy all resources (i.e. the static website files) as well as all created cloud infrastructure resources, run the following command.
+
+## Terraform commands:
 
 ### terraform delete
 confirm with "yes" - to destroy the cloud infrastructure
+
+## Confirm deletion
+It is recommended to verify successful deletion of all resources by navigating through the AWS Console and making sure of it.
