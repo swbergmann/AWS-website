@@ -3,8 +3,11 @@ Build AWS cloud infrastructure as code using Terraform and deploy a static websi
 
 # Project Description
 This application creates (and destroys) the necessary cloud infrastructure resources to host a static website on AWS. It also uploads (and destroys) the static website (located in the directory: s3_content/) to the S3 backend.  
-\
-The setup and installation processes were challenging and are documented in great detail below.  
+
+## Requirements/Scope
+High availability of the website, global low latency and automatic scaling of infrastructure components to serve high amounts of user traffic are implemented using a combination of AWS CloudFront and AWS S3.
+
+## Architecture
 
 # How to Setup the Project
 
@@ -32,7 +35,7 @@ click on the user, click on tab "Security credentials" and generate "new access 
 Open Terminal (i.e. terminal inside VS Code) and enter "aws configure", provide both keys from #6 and default zone "eu-central-1", then click enter.  
 
 ## 8. note on ami specifics  
-When using an ami (amazon machine image) in the code, the region (i.e. eu-central-1) of the provider in the file config.tf must be the same region as selected in the AWS console (website) when you are selecting an ami (amazon machine image) number from the AWS Console.  
+When using an ami (amazon machine image - i.e. when creating an EC2 instance) in the Terraform code, the region (i.e. eu-central-1) of the provider in the file config.tf must be the same region as selected in the AWS console (website) when you are choosing an ami (amazon machine image) number from the AWS Console.  
 
 # How to Run the Project
 ## Terraform commands:
