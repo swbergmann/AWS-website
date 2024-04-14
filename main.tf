@@ -100,8 +100,10 @@ resource "aws_s3_bucket_policy" "policy" {
   policy = data.aws_iam_policy_document.document.json
 }
 
-# Automatically upload all website files from "s3_content/" to the S3 bucket
-# or destroy all website files in the S3 bucket, when destroying the resource.
+# Automatically upload all website files from "s3_content/" 
+# to the S3 bucket when terraform creates the resources. 
+# Or automatically destroy all website files in the S3 
+# bucket, when terraform destroys the resources.
 resource "aws_s3_object" "auto_upload" {
   bucket = aws_s3_bucket.backend.id
 
