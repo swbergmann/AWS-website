@@ -17,13 +17,13 @@ A combination of AWS CloudFront and AWS S3 is used to implement:
 
 This section describes the steps and installations that were necessary to create and run the code in Visual Studio Code on macOS Sonoma.
 
-## 1. Install Terraform (via Homebrew)
+## 1. Install Terraform (i.e. via Homebrew)
 https://formulae.brew.sh/formula/terraform  
 
-## 2. Upgrade Terraform (via Terminal)
+## 2. Upgrade Terraform (i.e. via Terminal)
 https://developer.hashicorp.com/terraform/install?product_intent=terraform  
 
-## 3. Install Terraform Formatter (for VS Code)
+## 3. Install Terraform Formatter for VS Code (optional)
 https://marketplace.visualstudio.com/items?itemName=HashiCorp.terraform  
 
 ## 4. Install AWS CLI
