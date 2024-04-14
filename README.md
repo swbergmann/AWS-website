@@ -42,7 +42,7 @@ Open Terminal (i.e. terminal inside VS Code) and enter "aws configure", provide 
 When using an ami (amazon machine image - i.e. when creating an EC2 instance) in the Terraform code, the region (i.e. eu-central-1) of the provider in the file config.tf must be the same region as selected in the AWS console (website) when you are choosing an ami (amazon machine image) number from the AWS Console.  
 
 # How to Run the Project
-After cloning the project to your computer and setting up the described configurations, use tho following commands.  
+After cloning the project to your computer and setting up the described configurations, use the following commands.  
 
 ## Terraform commands:
 
