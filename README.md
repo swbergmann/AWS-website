@@ -1,7 +1,6 @@
 # AWS-website
-Host a simple webpage on AWS.
 
-This file describes the steps and installations that were necessary to run the code in Visual Studio Code editor.
+This file describes the steps and installations that were necessary to run the code in Visual Studio Code on macOS Sonoma.
 
 #1  
 Install Terraform (via Homebrew)  
@@ -39,6 +38,6 @@ When using an ami (amazon machine image) in the code, the region (i.e. eu-centra
 Terraform commands:  
 terraform init (run this after writing a new terraform configuration or cloning)  
 terraform validate  
-terraform plan  
-terraform apply  
-terraform delete  
+terraform plan (to see what will be applied)  
+terraform apply (to create the cloud infrastructure)  
+terraform delete (to destroy the cloud infrastructur)  

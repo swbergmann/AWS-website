@@ -1,3 +1,6 @@
+# Task 1.
+# Host a simple webpage on AWS using Terraform to write replicable Infrastructure as Code (IaC).
+
 locals {
   # value must be globally unique
   s3_bucket_name = "website-backend-6571963"
