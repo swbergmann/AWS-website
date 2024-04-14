@@ -104,7 +104,7 @@ resource "aws_s3_bucket_policy" "policy" {
 # to the S3 bucket when terraform creates the resources. 
 # Or automatically destroy all website files in the S3 
 # bucket, when terraform destroys the resources.
-resource "aws_s3_object" "auto_upload" {
+resource "aws_s3_object" "automatic_file_transfer" {
   bucket = aws_s3_bucket.backend.id
 
   for_each = fileset("s3_content/", "**/*.*")
